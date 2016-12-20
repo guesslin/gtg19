@@ -1,0 +1,121 @@
+Title of Doc
+Subtitle // <optional>
+20 Dec 2016
+Tags: test,gtg
+
+Lin, Yu-han
+Software Engineer, Glasnostic
+guesslin@glasnostic.com
+http://guesslin.github.io/
+@guesslin1986
+
+* 封面格式介紹
+
+	Title of Doc
+	Subtitle // <optional>
+	20 Dec 2016
+	Tags: test,gtg
+
+	Lin, Yu-han
+	Software Engineer, Glasnostic
+	guesslin@glasnostic.com
+	http://guesslin.github.io/
+	@guesslin1986
+
+* 大標/換頁
+
+	* 大標/換頁
+: 這是講者筆記，要啟用 `-note` 參數後在網頁上按下 `N` 才可以看到，然後總之就是先說聲你好
+# 這是註解，你看不到我
+
+** 小標題
+
+	** 小標題
+
+* 引用網頁
+
+	.html doc.html
+
+.html doc.html
+
+* 引用圖片
+
+	.image gopher.jpg 480 _
+
+.image gopher.jpg 480 _
+
+* 引用影片
+
+	.video ds3.mp4 video/mp4 480 _
+
+.video ds3.mp4 video/mp4 480 _
+
+* 引用 link
+
+	.link http://www.google.com/ google
+
+.link http://www.google.com/ google
+
+* 引用 code
+
+	.code codes/example01/example01.go /OMIT START/,/OMIT END/
+
+.code codes/example01/example01.go /OMIT START/,/OMIT END/
+
+* 引用 code (可編輯)
+
+	.code -edit codes/example01/example01.go /OMIT START/,/OMIT END/
+
+.code -edit codes/example01/example01.go /OMIT START/,/OMIT END/
+
+* 引用 code (有行號)
+
+	.code -numbers codes/example01/example01.go /OMIT START/,/OMIT END/
+
+.code -numbers codes/example01/example01.go /OMIT START/,/OMIT END/
+
+* 引用 code (HighLight)
+
+	.code codes/example01/example01.go /OMIT START/,/OMIT END/ HLexample
+
+.code codes/example01/example01.go /OMIT START/,/OMIT END/ HLexample
+
+
+* 引用 PlayGround
+
+	.play codes/example01/example01.go /OMIT START/,/OMIT END/
+
+.play codes/example01/example01.go /OMIT START/,/OMIT END/
+
+* 把 present 擺上 GAE
+
+- 複製 tools/cmd/present 到你的 GAE 專案底下
+
+	Project/
+		present/
+		slides/
+	app.yaml
+* 設定
+
+- 並且修改你的 `app.yaml` 設定
+
+	application: gtg19
+	version: 1
+	runtime: go
+	api_version: go1
+
+	handlers:
+	- url: /favicon.ico
+	  static_files: present/static/favicon.ico
+	  upload: present/static/favicon.ico
+	- url: /static
+	  static_dir: present/static
+	  application_readable: true
+	- url: /.*
+	  script: _go_app
+
+	nobuild_files: slides
+
+* Glasnostic
+
+** WE ARE HIRING
