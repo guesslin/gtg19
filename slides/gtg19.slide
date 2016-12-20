@@ -1,5 +1,5 @@
-Title of Doc
-Subtitle // <optional>
+Title of Slide
+Subtitle
 20 Dec 2016
 Tags: test,gtg
 
@@ -34,9 +34,9 @@ http://guesslin.github.io/
 
 * 引用網頁
 
-	.html doc.html
+	.html doc.html    // Not support with http://go-talks.appspot.com/
 
-.html doc.html
+# .html doc.html
 
 * 引用圖片
 
@@ -46,9 +46,15 @@ http://guesslin.github.io/
 
 * 引用影片
 
-	.video ds3.mp4 video/mp4 480 _
+	.video ds3.mp4 video/mp4 480 _  // app spot 有檔案上傳大小限制
 
-.video ds3.mp4 video/mp4 480 _
+# .video ds3.mp4 video/mp4 480 _
+
+* 引用影片(Youtube)
+
+	.iframe http://www.youtube.com/embed/VhfqhP2eUGM 480 853
+
+.iframe http://www.youtube.com/embed/VhfqhP2eUGM 480 853
 
 * 引用 link
 
